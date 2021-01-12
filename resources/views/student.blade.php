@@ -44,7 +44,7 @@
                     <img src="https://marketplace.canva.com/MAB7yqsko0c/1/screen_2x/canva-smart-little-schoolgirl--MAB7yqsko0c.jpg" class="card-img-top" alt="...">
                     <div class="card-body">
                         <h5 class="card-title">Enter the informations of the new student</h5>
-                        <form action="{{ url('/store') }}" method="post">
+                        <form method = "get" action = "/store">
                             @csrf
                             <div class="form-group">
                                 <label>CNE</label>
@@ -100,7 +100,7 @@
                     <img src="https://marketplace.canva.com/MAB7yqsko0c/1/screen_2x/canva-smart-little-schoolgirl--MAB7yqsko0c.jpg" class="card-img-top" alt="...">
                     <div class="card-body">
                         <h5 class="card-title">Update informations of student</h5>
-                        <form action="{{ url('/update/'.$student->id) }}" method="post">
+                        <form action="{{ url('/update/'.$student->id) }}" method="get">
                             @csrf
                             <div class="form-group">
                                 <label>CNE</label>
